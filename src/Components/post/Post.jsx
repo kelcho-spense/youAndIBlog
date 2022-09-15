@@ -10,12 +10,11 @@ function Post({ post }) {
         )}      
       <div className="postInfo">
         <div className="postCats">
-          {
-            post.categories.map((c) => (
+          { post && post.categories.map((c) => (
               <div className="postCat" key={c._id}>
                 {c.name}
               </div>
-            ))}
+          ))}
 
           <Link className="link" to={`/post/${post._id}`}>
             <span className="postTitle">
