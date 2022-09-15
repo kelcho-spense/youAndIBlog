@@ -20,7 +20,7 @@ function Sidebar() {
     <div className="sidebar">
         <div className="sidebarItem">
             <span className="sidebarTitle" >ABOUT ME</span>
-            {user.profilepic ? (
+            {user?.profilepic ? (
              <img className="aboutMeImg" src={PF + user.profilepic} alt="..." />
               ) : ( 
                 <span clas>📧</span>
