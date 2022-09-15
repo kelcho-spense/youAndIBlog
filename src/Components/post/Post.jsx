@@ -11,8 +11,8 @@ function Post({ post }) {
       <div className="postInfo">
         <div className="postCats">
           {
-            post.categories.map((c,index) => (
-              <div className="postCat" key={index}>
+            post.categories.map((c) => (
+              <div className="postCat" key={c._id}>
                 {c.name}
               </div>
             ))}

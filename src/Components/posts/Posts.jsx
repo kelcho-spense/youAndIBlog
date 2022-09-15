@@ -4,8 +4,8 @@ import './posts.css';
 function Posts({ posts }) {
   return (
     <div className='posts' >
-      {posts && posts?.map((p,index) => (
-        <Post post={p} key={index} />
+      {posts && posts?.map((p) => (
+        <Post post={p} key={p._id} />
      ) )}
     </div>
   )
