@@ -4,7 +4,7 @@ import './posts.css';
 function Posts({ posts }) {
   return (
     <div className='posts' >
-      {posts && posts?.map((p) => (
+      {posts && Object.entries(posts).map((p) => (
         <Post post={p} key={p._id} />
      ) )}
     </div>
