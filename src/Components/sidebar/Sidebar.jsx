@@ -14,10 +14,13 @@ function Sidebar() {
       const res = await axios.get("/categories");
       if (res.data && res.data !== null){
         setCats(res.data);
-    }      
+      }  
+          
     };
     getCats();
   },[])
+  if (cats.length > 0){
+  console.log(cats)}
   return (
     <div className="sidebar">
         <div className="sidebarItem">
@@ -38,7 +41,7 @@ function Sidebar() {
         <div className="sidebarItem">
             <span className="sidebarTitle">CATEGORIES</span>
             <ul className="sidebarList">
-              {cats.map((t,index) => (
+              {cats.length > 0 && cats.map((t,index) => (
                 <Link to ={`/?cat=${t.name}`} key={index} className="link">
                  <li className="sidebarListItem">{t.name}</li>
                  </Link>                 
