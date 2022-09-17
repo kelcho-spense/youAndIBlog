@@ -19,8 +19,6 @@ function Sidebar() {
     };
     getCats();
   },[])
-  if (cats.length > 0){
-  console.log(cats)}
   return (
     <div className="sidebar">
         <div className="sidebarItem">
