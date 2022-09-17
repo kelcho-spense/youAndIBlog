@@ -10,8 +10,8 @@ function Post({ post }) {
         )}      
       <div className="postInfo">
         <div className="postCats">
-          { post.categories && post.categories.map((c) => (
-              <div className="postCat" key={c._id}>
+          { post.categories && post.categories.map((c,index) => (
+              <div className="postCat" key={index}>
                 {c.name}
               </div>
           ))}

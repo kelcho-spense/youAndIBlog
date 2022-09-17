@@ -9,7 +9,6 @@ function TopBar() {
   const handleLogout = () => {
     dispatch({type: "LOGOUT"});
   }
-  console.log(user);
   
   return (
     <div className="top">

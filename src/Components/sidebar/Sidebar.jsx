@@ -23,7 +23,7 @@ function Sidebar() {
             {user?.profilepic ? (
              <img className="aboutMeImg" src={PF + user.profilepic} alt="..." />
               ) : ( 
-                <span clas>📧</span>
+                <span >📧</span>
               )}
         <p>
           {!user ? (
@@ -36,7 +36,7 @@ function Sidebar() {
         <div className="sidebarItem">
             <span className="sidebarTitle">CATEGORIES</span>
             <ul className="sidebarList">
-              {cats && Object.entries(cats).map((cat) => (
+              {cats && cats.map((cat) => (
                 <Link to ={`/?cat=${cat.name}`} key={cat._id} className="link">
                  <li className="sidebarListItem">{cat.name}</li>
                  </Link>
