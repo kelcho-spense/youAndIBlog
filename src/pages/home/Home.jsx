@@ -12,15 +12,16 @@ function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get("/posts" + search)
-      setPosts(res.data)
+      if (res.data && res.data !== null){
+          setPosts(res.data)
+      }
     }
     fetchPosts();
   },[search])
   return (
     <>
      <Header />
-    <div className="home">     
-       
+    <div className="home"> 
           <Posts posts={posts} />
           <Sidebar /> 
     </div>
